@@ -20,9 +20,7 @@
     "mongoose": "^7.3.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "qrcode": "^1.5.3",
     "redis": "^4.6.8",
-    "shortid": "^2.2.16",
     "ua-parser-js": "^1.0.35"
   },
   "devDependencies": {

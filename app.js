@@ -2,9 +2,9 @@ const express = require("express")
 const passport = require('passport')
 const session = require('express-session')
 const userRoute = require('./routes/user.route')
+const urlRoute = require('./routes/url.route') 
 require('./db.js').connectToMongoDB()
 require("./authentication/auth")
-require("./authentication/google")
 require("dotenv").config()
 
 
@@ -36,6 +36,7 @@ app.get('/', (req, res)=>{
   });
 
 app.use('/user', userRoute);
+app.use('/', urlRoute);
 
 
 PORT = process.env.PORT

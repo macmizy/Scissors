@@ -10,10 +10,6 @@ userRoute.post("/signup",validateUser,passport.authenticate('signup', { session:
 
 userRoute.post('/login',passport.authenticate('login',{ successRedirect: '/',failureRedirect: '/login',}),controller.login);
 
-userRoute.get('/auth/google',passport.authenticate('google', { scope:[ 'email', 'profile' ] }));
-
-userRoute.get( '/auth/google/callback',passport.authenticate( 'google', {successRedirect: '/',failureRedirect: '/login',}))
-
 userRoute.get('/allusers', controller.getAllUsers)
 
 module.exports = userRoute

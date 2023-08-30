@@ -16,9 +16,19 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    googleId:{
-        type: String,
+    urls:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Url'
+        }
+    ],
+    createdAt: {
+        type: Date,
+        default: Date.now
     },
+    updatedAt: {
+        type: Date
+    }
 })
 
 userSchema.pre(

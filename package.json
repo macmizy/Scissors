@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +15,17 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "geoip-lite": "^1.4.7",
     "joi": "^17.9.2",
     "mongoose": "^7.3.0",
     "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "qrcode": "^1.5.3",
+    "redis": "^4.6.8",
+    "shortid": "^2.2.16",
+    "ua-parser-js": "^1.0.35"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
